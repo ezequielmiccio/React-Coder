@@ -5,7 +5,7 @@ const NavBar = () => {
         <nav>
             <button>boton1</button>
             <button>boton2</button>
-            <CartWidget />
+            {/* <CartWidget /> */}
         </nav>
     )
 }

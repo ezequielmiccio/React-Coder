@@ -1,22 +1,21 @@
 // import logo from './logo.svg';
 // import './App.css';
 import { useState } from 'react'
-import Avatar from './components/Avatar/Avatar'
+import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
-import ClassCount from "./components/ClassCount/ClassCount";
-import FunctionCounter from "./components/FunctionCounter/FunctionCounter";
-
-
 
 
 function App() {
-  const [show, setShow] = useState(true)
+
+  const onAdd = (quantity) => {
+    console.log(quantity)
+  }
 
   return (
     <div className="App">
-      <button onClick={() => setShow(!show)}>{show ? 'No mostrar' : 'Mostrar'}</button>
-      {show ? <FunctionCounter initial={1}/> : null}
+      <ItemListContainer greeting={'Hola Coder'}/>
+      <ItemCount initial={1} stock={20} onAdd={onAdd}/>
     </div>
   );
 }
