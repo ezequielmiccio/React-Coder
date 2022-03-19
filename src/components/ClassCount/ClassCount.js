@@ -3,7 +3,7 @@ import { Component } from 'react'
 class ClassCount extends Component {
     constructor(props) {
         super(props)
-        this.state = { count: 0}
+        this.state = { count: this.props.initial }
     }
 
     decrement = () => {

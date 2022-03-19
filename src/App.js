@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
+import { useState } from 'react'
 import Avatar from './components/Avatar/Avatar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
@@ -10,19 +11,12 @@ import FunctionCounter from "./components/FunctionCounter/FunctionCounter";
 
 
 function App() {
+  const [show, setShow] = useState(true)
 
   return (
     <div className="App">
-      <NavBar />
-      <ItemListContainer greeting="Hola Coders"/>
-      <Avatar name="Sebastian" age="28" country="Argentina">
-        <button>Boton</button>
-      </Avatar>
-      <Avatar name="Renzo" age="25" country="Uruguay"> 
-        Texto de prueba
-      </Avatar>
-      <FunctionCounter />
-      <ClassCount />
+      <button onClick={() => setShow(!show)}>{show ? 'No mostrar' : 'Mostrar'}</button>
+      {show ? <FunctionCounter initial={1}/> : null}
     </div>
   );
 }
