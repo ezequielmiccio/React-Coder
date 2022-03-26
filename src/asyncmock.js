@@ -19,3 +19,19 @@ export const getProducts = () => {
         }, 2000)
     })
 }
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 2000)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === parseInt(id)))
+        }, 2000)
+    })
+}
