@@ -1,21 +1,21 @@
 // import logo from './logo.svg';
 // import './App.css';
-import { useState } from 'react'
-import ItemCount from './components/ItemCount/ItemCount';
+// import { useState } from 'react'
+// import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import NavBar from './components/NavBar/NavBar';
+// import NavBar from './components/NavBar/NavBar';
 
 
 function App() {
 
-  const onAdd = (quantity) => {
-    console.log(quantity)
-  }
+  // const onAdd = (quantity) => {
+  //   console.log(quantity)
+  // }
 
   return (
     <div className="App">
       <ItemListContainer greeting={'Hola Coder'}/>
-      <ItemCount initial={1} stock={20} onAdd={onAdd}/>
+      {/* <ItemCount initial={1} stock={20} onAdd={onAdd}/> */}
     </div>
   );
 }
